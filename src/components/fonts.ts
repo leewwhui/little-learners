@@ -8,7 +8,7 @@ export const raleway = localFont({
 
 
 export const outfit = localFont({
-  src: "../fonts/outfit.ttf",
+  src: "../fonts/Outfit.ttf",
   variable: "--font-outfit",
   display: "swap",
   weight: "500",
