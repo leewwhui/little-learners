@@ -5,11 +5,11 @@ import React from "react";
 
 export const FooterNav = () => {
   return (
-    <div className="w-full h-full flex gap-20">
-      <div className="flex flex-col gap-10 justify-start w-1/3">
+    <div className="w-full h-full flex flex-col lg:flex-row items-center gap-20 lg:items-start">
+      <div className="flex flex-col gap-10">
         <div className="space-y-5">
-          <Logo />
-          <p>
+          <Logo className="justify-center md:justify-start" />
+          <p className="text-center md:text-start">
             We believe in the power of play to foster creativity,
             problem-solving skills, and imagination.
           </p>
@@ -39,13 +39,21 @@ export const FooterNav = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-4 gap-7 w-full">
+      <div className="grid grid-cols-2 gap-7 w-full md:grid-cols-4">
         <div className="flex flex-col gap-6 w-full">
           <p className="font-bold">Home</p>
           <div className="flex-1 flex gap-3 flex-col">
             <Link href={""}>Features</Link>
             <Link href={""}>Our Testimonials</Link>
             <Link href={""}>FAQ</Link>
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-6">
+          <p className="font-bold">Academics</p>
+          <div className="flex-1 flex gap-3 flex-col">
+            <Link href={""}>Special Features</Link>
+            <Link href={""}>Gallery</Link>
           </div>
         </div>
 
@@ -57,14 +65,6 @@ export const FooterNav = () => {
             <Link href={""}>Awards and Recognitions</Link>
             <Link href={""}>History</Link>
             <Link href={""}>Teachers</Link>
-          </div>
-        </div>
-
-        <div className="flex flex-col gap-6">
-          <p className="font-bold">Academics</p>
-          <div className="flex-1 flex gap-3 flex-col">
-            <Link href={""}>Special Features</Link>
-            <Link href={""}>Gallery</Link>
           </div>
         </div>
 

@@ -20,7 +20,7 @@ export default function RootLayout({
         <div className="h-full w-[93%] mx-auto pb-12 pt-7">
           <Navigation />
           <main className="py-12 xl:w-[82%] mx-auto md:w-[90%] w-full">{children}</main>
-          {/* <Footer /> */}
+          <Footer />
         </div>
       </body>
     </html>

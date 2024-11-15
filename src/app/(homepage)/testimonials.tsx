@@ -55,7 +55,7 @@ const description =
 export const Testimonials = () => {
   return (
     <Section tag={tag} title={title} description={description}>
-      <Carousel className="w-full justify-between items-center md:flex hidden">
+      <Carousel className="xl:flex hidden">
         <CarouselContent>
           {chunk(data, 3).map((items, index) => (
             <CarouselItem
@@ -85,7 +85,37 @@ export const Testimonials = () => {
         />
       </Carousel>
 
-      <Carousel className="md:hidden flex">
+      <Carousel className="lg:flex xl:hidden hidden">
+        <CarouselContent>
+          {chunk(data, 2).map((items, index) => (
+            <CarouselItem
+              key={index}
+              className="gap-[50px] grid grid-cols-2 pb-2 px-[50px]"
+            >
+              {items.map((d) => (
+                <TextimonialCard
+                  avatar={d.avatar}
+                  name={d.name}
+                  score={d.score}
+                  quote={d.quote}
+                  key={d.name}
+                />
+              ))}
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+
+        <CarouselPrevious
+          className="size-14 border bg-white rounded-lg"
+          variant="default"
+        />
+        <CarouselNext
+          className="size-14 border bg-white rounded-lg"
+          variant="default"
+        />
+      </Carousel>
+
+      <Carousel className="lg:hidden flex flex-col gap-5">
         <CarouselContent>
           {data.map((item, index) => (
             <CarouselItem key={index}>
@@ -100,14 +130,16 @@ export const Testimonials = () => {
           ))}
         </CarouselContent>
 
-        {/* <CarouselPrevious
-          className="size-14 border bg-white rounded-lg"
-          variant="default"
-        />
-        <CarouselNext
-          className="size-14 border bg-white rounded-lg"
-          variant="default"
-        /> */}
+        <div className="flex items-center justify-center gap-5">
+          <CarouselPrevious
+            className="size-14 border bg-white rounded-lg translate-y-0 relative left-0"
+            variant="default"
+          />
+          <CarouselNext
+            className="size-14 border bg-white rounded-lg translate-y-0 relative right-0"
+            variant="default"
+          />
+        </div>
       </Carousel>
     </Section>
   );
