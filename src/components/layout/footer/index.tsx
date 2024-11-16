@@ -9,11 +9,11 @@ export const Footer = () => {
       <div className="w-full flex flex-col gap-7">
         <div className="py-7 flex flex-col items-center justify-between border-y gap-5 lg:flex-row">
           <div className="flex items-center text-sm lg:text-[18px] gap-3 h-8">
-            <p>Terms of Service</p>
-            <div className="h-full border-1"></div>
-            <p>Privacy Policy</p>
-            <div className="h-full border-1"></div>
-            <p>Cookie Policy</p>
+            <p className="text-center">Terms of Service</p>
+            <div className="h-2/3 border-1"></div>
+            <p className="text-center">Privacy Policy</p>
+            <div className="h-2/3 border-1"></div>
+            <p className="text-center">Cookie Policy</p>
           </div>
 
           <div className="flex gap-3 items-center">
