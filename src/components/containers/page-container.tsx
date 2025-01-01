@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import React, { ComponentProps, FC } from "react";
 
-export const Container: FC<ComponentProps<"div">> = (props) => {
+export const PageContainer: FC<ComponentProps<"div">> = (props) => {
   const { className, children, ...rest } = props;
 
   return (

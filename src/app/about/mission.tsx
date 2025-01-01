@@ -1,4 +1,5 @@
 import { Card } from "@/components/cards/card";
+import { TwoColGrid } from "@/components/containers/two-col-grid";
 import { Section } from "@/components/section";
 import { MissionData } from "@/data/about/mission-data";
 
@@ -7,7 +8,7 @@ export const Mission = () => {
 
   return (
     <Section tag={tag} title={title} description={description}>
-      <div className="w-full flex gap-14">
+      <TwoColGrid className="gap-14">
         {data.map((d) => (
           <Card className="space-y-7 p-14" key={d.title}>
             <div className="flex justify-between items-center">
@@ -17,7 +18,7 @@ export const Mission = () => {
             <p className="text-[20px] font-medium">{d.description}</p>
           </Card>
         ))}
-      </div>
+      </TwoColGrid>
     </Section>
   );
 };

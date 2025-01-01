@@ -3,15 +3,16 @@ import { MemberData } from "@/data/about/member-data";
 import React from "react";
 import { Card } from "../../components/cards/card";
 import { EnvelopeIcon } from "@heroicons/react/16/solid";
+import { TwoColGrid } from "../../components/containers/two-col-grid";
 
 export const Members = () => {
   const { tag, title, description, data } = MemberData;
 
   return (
     <Section tag={tag} title={title} description={description}>
-      <div className="grid grid-cols-2 gap-12">
+      <TwoColGrid className="gap-12">
         {data.map((d) => (
-          <Card className="p-12 gap-7">
+          <Card className="p-12 gap-7 justify-start">
             <div className="flex items-center justify-between h-[100px]">
               <h1 className="text-3xl font-extrabold">{d.name}</h1>
               <div className="bg-secondary border rounded-lg size-14 flex items-center justify-center">
@@ -27,7 +28,7 @@ export const Members = () => {
             </div>
           </Card>
         ))}
-      </div>
+      </TwoColGrid>
     </Section>
   );
 };

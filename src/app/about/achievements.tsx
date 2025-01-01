@@ -1,13 +1,14 @@
 import { Section } from "@/components/section";
 import { IconCard } from "@/components/cards/icon-card";
 import { AchievementsData } from "@/data/about/achievements-data";
+import { ThreeColGrid } from "@/components/containers/three-col-grid";
 
 export const Achievements = () => {
   const { tag, title, description, data } = AchievementsData;
 
   return (
     <Section tag={tag} title={title} description={description}>
-      <div className="w-full grid grid-cols-3 gap-10">
+      <ThreeColGrid className="gap-10">
         {data.map((card, index) => (
           <IconCard
             icon={<card.Icon width={32} />}
@@ -16,7 +17,7 @@ export const Achievements = () => {
             key={index}
           />
         ))}
-      </div>
+      </ThreeColGrid>
     </Section>
   );
 };

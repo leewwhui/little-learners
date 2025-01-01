@@ -1,20 +1,20 @@
 import React from "react";
 import { Mission } from "./mission";
 import { Achievements } from "./achievements";
-import { Card } from "@/components/cards/card";
-import { Container } from "@/components/container";
 import { Members } from "./members";
+import { PageContainer } from "@/components/containers/page-container";
+import { TitleCard } from "../../components/cards/title-card";
 
 const About = () => {
   return (
     <div className="flex flex-col md:gap-52 gap-20">
-      <Card className="h-[480px]"></Card>
+      <TitleCard />
 
-      <Container>
+      <PageContainer>
         <Mission />
         <Achievements />
         <Members />
-      </Container>
+      </PageContainer>
     </div>
   );
 };

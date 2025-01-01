@@ -3,17 +3,17 @@ import { Benefits } from "./benefits";
 import { Testimonials } from "./testimonials";
 import { Questions } from "./questions";
 import { Navigate } from "./navigate";
-import { Container } from "@/components/container";
+import { PageContainer } from "@/components/containers/page-container";
 
 const Home = () => {
   return (
-    <Container>
+    <PageContainer>
       <Hero />
       <Benefits />
       <Testimonials />
       <Questions />
       <Navigate />
-    </Container>
+    </PageContainer>
   );
 };
 
