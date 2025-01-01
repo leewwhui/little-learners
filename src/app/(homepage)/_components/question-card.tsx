@@ -39,7 +39,7 @@ export const QuestionCard: FC<QuestionCardProps> = (props) => {
           </div>
         </div>
 
-        <CollapsibleTrigger className="border rounded-md bg-[#FFF5F0] size-10 flex items-center justify-center cursor-pointer">
+        <CollapsibleTrigger className="border rounded-md bg-secondary size-10 flex items-center justify-center cursor-pointer">
           {open ? <MinusIcon width={24} /> : <PlusIcon width={24} />}
         </CollapsibleTrigger>
       </div>

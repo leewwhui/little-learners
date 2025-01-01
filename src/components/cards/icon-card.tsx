@@ -12,7 +12,7 @@ export const IconCard: FC<IconCardProps> = (props) => {
 
   return (
     <Card className="px-12 pt-20 pb-12 space-y-5 relative justify-start">
-      <div className="absolute size-20 bg-[#ffdecc] border rounded-xl left-[5%] top-0 -translate-y-1/2 flex items-center justify-center">
+      <div className="absolute size-20 bg-secondary border rounded-xl left-[5%] top-0 -translate-y-1/2 flex items-center justify-center">
         {icon}
       </div>
 

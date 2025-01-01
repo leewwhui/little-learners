@@ -1,9 +1,7 @@
 import { cn } from "@/lib/utils";
-import { ComponentProps, FC, PropsWithChildren } from "react";
+import { ComponentProps, FC } from "react";
 
-type CardProps = PropsWithChildren & ComponentProps<"div">;
-
-export const Card: FC<CardProps> = (props) => {
+export const Card: FC<ComponentProps<"div">> = (props) => {
   const { children, className, ...rest } = props;
 
   return (
