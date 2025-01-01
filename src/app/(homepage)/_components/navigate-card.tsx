@@ -1,4 +1,6 @@
+import { Card } from "@/components/cards/card";
 import { ArrowRightIcon } from "@heroicons/react/16/solid";
+import Link from "next/link";
 import { FC } from "react";
 
 interface NavigateCardProps {
@@ -10,7 +12,7 @@ export const NavigateCard: FC<NavigateCardProps> = (props) => {
   const { title, description } = props;
 
   return (
-    <div className="bg-white border shadow-card md:p-20 p-10 rounded-xl flex flex-col gap-12 justify-between">
+    <Card className="md:p-20 p-10 gap-12">
       <div className="space-y-12">
         <div className="space-y-7">
           <h1 className="md:text-5xl text-3xl text-center">{title}</h1>
@@ -30,9 +32,12 @@ export const NavigateCard: FC<NavigateCardProps> = (props) => {
         <p className="text-xl text-center">{description}</p>
       </div>
 
-      <button className="bg-accent border flex py-4 justify-center gap-3 items-center rounded-lg shadow-card active:translate-x-1 active:translate-y-1 transition-all active:shadow-none">
+      <Link
+        href="/"
+        className="bg-accent cursor-pointer border flex py-4 justify-center gap-3 items-center rounded-lg shadow-card active:translate-x-1 active:translate-y-1 transition-all active:shadow-none"
+      >
         Learn More <ArrowRightIcon width={21} />
-      </button>
-    </div>
+      </Link>
+    </Card>
   );
 };

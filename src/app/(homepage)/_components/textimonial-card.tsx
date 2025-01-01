@@ -1,3 +1,4 @@
+import { Card } from "@/components/cards/card";
 import { StarIcon } from "@heroicons/react/16/solid";
 import { FC } from "react";
 
@@ -12,7 +13,7 @@ export const TextimonialCard: FC<TextimonialCardProps> = (props) => {
   const { avatar, name, score, quote } = props;
 
   return (
-    <div className="bg-white border rounded-lg p-12 flex flex-col gap-8 w-full h-full">
+    <Card className="p-12 flex flex-col gap-8">
       <div className="flex flex-col justify-center items-center gap-3">
         <div className="rounded-full border-1 w-fit flex items-center justify-center bg-accent p-1">
           {avatar}
@@ -27,6 +28,6 @@ export const TextimonialCard: FC<TextimonialCardProps> = (props) => {
       </div>
 
       <p className="text-center">{quote}</p>
-    </div>
+    </Card>
   );
 };

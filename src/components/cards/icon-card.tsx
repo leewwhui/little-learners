@@ -1,24 +1,23 @@
 import { FC } from "react";
+import { Card } from "./card";
 
-interface BenefitCardProps {
+interface IconCardProps {
   icon: React.ReactNode;
   title: string;
   description: string;
 }
 
-export const BenefitCard: FC<BenefitCardProps> = (props) => {
-  const {icon, title, description} = props;
+export const IconCard: FC<IconCardProps> = (props) => {
+  const { icon, title, description } = props;
 
   return (
-    <div
-      className="shadow-card border rounded-lg px-12 pt-20 pb-12 bg-white space-y-5 relative"
-    >
+    <Card className="px-12 pt-20 pb-12 space-y-5 relative justify-start">
       <div className="absolute size-20 bg-[#ffdecc] border rounded-xl left-[5%] top-0 -translate-y-1/2 flex items-center justify-center">
         {icon}
       </div>
 
       <h1 className="text-[28px] font-bold">{title}</h1>
       <p>{description}</p>
-    </div>
+    </Card>
   );
 };

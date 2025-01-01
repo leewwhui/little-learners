@@ -6,7 +6,7 @@ import { Navigate } from "./navigate";
 
 const Home = () => {
   return (
-    <div className="w-full h-full flex flex-col md:gap-52 gap-20">
+    <div className="flex flex-col md:gap-52 gap-20 xl:w-[82%] md:w-[90%] mx-auto">
       <Hero />
       <Benefits />
       <Testimonials />

@@ -8,7 +8,7 @@ export const Hero = () => {
 
       <div className="flex-1 flex flex-col md:h-[70%] my-auto justify-between h-[80%] gap-8">
         <div className="flex flex-col lg:items-start items-center">
-          <span className="xl:text-[22px] text-[18px] w-fit border-b pb-1">
+          <span className="xl:text-xl text-lg w-fit border-b pb-1">
             Welcome to Little Learners Academy
           </span>
 
